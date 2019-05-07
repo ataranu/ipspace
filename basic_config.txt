@@ -1,0 +1,32 @@
+switch#
+!
+conf t
+ip domain-name lab.com
+crypto key generate rsa modulus 1024
+!
+username snail privilege 15 secret snail
+!
+line vty 0 4
+ login local
+!
+int e3/3
+ no sw
+ ip add dhcp
+
+router#
+!
+conf t
+ip domain-name lab.com
+crypto key generate rsa modulus 1024
+!
+username snail privilege 15 secret snail
+!
+line vty 0 4
+ login local
+!
+int e0/0
+ ip add dhcp
+ no cdp ena
+ no sh
+end
+wr

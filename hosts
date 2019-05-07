@@ -1,23 +1,8 @@
-[hosts]
-iosxr-1 ansible_host=10.132.85.209
-iosxe-1 ansible_host=10.132.85.215
-asa-1 ansible_host=10.132.84.228
-ios-1 ansible_host=10.132.84.229
-nxos-1 ansible_host=10.132.85.212
-
-[hosts:vars]
-ansible_connection=local
+[all:vars]
+ansible_connection=ssh
 ansible_user=snail
 ansible_password=snail
 
-[servers]
-10.132.84.225
-10.132.84.230
-
-[servers:vars]
-ansible_connection=ssh
-ansible_user=snail
-ansible_password=1234$#@Q
 
 [ipspace]
 sw-1 ansible_host=10.132.84.61

@@ -1,0 +1,5 @@
+---
+- hosts: ipspace
+  tasks:
+  - name: Raw commands
+    raw: show version
