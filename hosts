@@ -3,7 +3,6 @@ ansible_connection=ssh
 ansible_user=snail
 ansible_password=snail
 
-
 [ipspace]
 sw-1 ansible_host=10.132.84.61
 rt-1 ansible_host=10.132.84.54
